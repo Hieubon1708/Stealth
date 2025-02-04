@@ -1,0 +1,789 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6845928280587109183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5081431811118303117}
+  m_Layer: 0
+  m_Name: Dollars Pack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5081431811118303117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6845928280587109183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2698472028079728603}
+  - {fileID: 3676226717984811971}
+  - {fileID: 582873586745936673}
+  - {fileID: 318476516798531454}
+  - {fileID: 1644120917668051660}
+  - {fileID: 1394762553232227634}
+  - {fileID: 5816285345409989827}
+  - {fileID: 2508138739443882004}
+  - {fileID: 3621476021253401433}
+  - {fileID: 1965585586704709342}
+  - {fileID: 2372605100963373908}
+  - {fileID: 2645144025202916288}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &316659717553172586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.33300018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22099972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &318476516798531454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 316659717553172586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &583423486467849269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.33300018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22099972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &582873586745936673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 583423486467849269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1393096379619232294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3130002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.18100071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &1394762553232227634 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 1393096379619232294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1648145537135709656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3130002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.18100071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &1644120917668051660 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 1648145537135709656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1966205297371595210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3130002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22099972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &1965585586704709342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 1966205297371595210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2369838045366686784
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &2372605100963373908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 2369838045366686784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2504219116211597056
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41000026
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &2508138739443882004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 2504219116211597056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2646714258226498772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &2645144025202916288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 2646714258226498772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2701195378299965647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.33300018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.18100071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &2698472028079728603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 2701195378299965647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3624383541201951821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13800025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &3621476021253401433 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 3624383541201951821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3677998719786212567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.33300018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.18100071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &3676226717984811971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 3677998719786212567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5816940243995249623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081431811118303117}
+    m_Modifications:
+    - target: {fileID: 1800844154914323, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_Name
+      value: DollarsGame (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3130002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22099972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+--- !u!4 &5816285345409989827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069162586093332, guid: b41b5386023fc1b4ea76d19498f99b9e, type: 3}
+  m_PrefabInstance: {fileID: 5816940243995249623}
+  m_PrefabAsset: {fileID: 0}

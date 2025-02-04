@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_ActionBuildings
+  m_Shader: {fileID: 4800000, guid: 6db75eca6cb65ed4693cf8ceb14e2d2e, type: 3}
+  m_ValidKeywords:
+  - DR_CEL_EXTRA_ON
+  - _CELPRIMARYMODE_SINGLE
+  - _UNITYSHADOWMODE_MULTIPLY
+  m_InvalidKeywords:
+  - _TEXTUREBLENDINGMODE_MULTIPLY
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _CelCurveTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _CelStepTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _MainTex:
+        m_Texture: {fileID: 2800000, guid: cf49649aa496ece43a7b865851a3d21f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AddColorEnabled: 0
+      _BumpScale: 1
+      _CelExtraEnabled: 1
+      _CelNumSteps: 3
+      _CelPrimaryMode: 1
+      _Cutoff: 0
+      _DetailNormalMapScale: 1
+      _DstBlend: 0
+      _FlatRimEdgeSmoothness: 0.5
+      _FlatRimLightAlign: 0
+      _FlatRimSize: 0.5
+      _FlatSpecularEdgeSmoothness: 0.451
+      _FlatSpecularSize: 0.894
+      _Flatness: 0.703
+      _FlatnessExtra: 1
+      _FogYEnd: -40
+      _FogYStart: -20
+      _GlossMapScale: 1
+      _Glossiness: 0
+      _GlossyReflections: 1
+      _GradientAngle: 0
+      _GradientCenterX: 0
+      _GradientCenterY: 0
+      _GradientEnabled: 0
+      _GradientSize: 10
+      _HeightFogEnd: 12.4
+      _HeightFogStart: 3.07
+      _LightContribution: 0
+      _Metallic: 0
+      _Mode: 0
+      _OcclusionStrength: 1
+      _Parallax: 0.005
+      _RampSmooth: 0.727
+      _RampThreshold: 0.125
+      _RimEnabled: 0
+      _SelfShadingSize: 0.788
+      _SelfShadingSizeExtra: 0.546
+      _ShadowEdgeSize: 0.205
+      _ShadowEdgeSizeExtra: 0.258
+      _SmoothnessTextureChannel: 0
+      _SpecularEnabled: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _TextureBlendingMode: 0
+      _TextureImpact: 1
+      _UVSec: 0
+      _UnityShadowMode: 1
+      _UnityShadowPower: 0.889
+      _UnityShadowSharpness: 1
+      _VertexColorsEnabled: 0
+      _ZWrite: 1
+    m_Colors:
+      _AddColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+      _Color: {r: 0.079057194, g: 0.003025995, b: 0.3207547, a: 1}
+      _ColorDim: {r: 1, g: 1, b: 1, a: 1}
+      _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+      _ColorDimExtra: {r: 0.42418203, g: 0.39607844, b: 0.7137255, a: 1}
+      _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+      _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+      _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+      _FlatRimColor: {r: 1, g: 1, b: 1, a: 1}
+      _FlatSpecularColor: {r: 1, g: 1, b: 1, a: 1}
+      _FogColor: {r: 0.32941177, g: 0.94509804, b: 1, a: 1}
+      _HColor: {r: 1, g: 1, b: 1, a: 1}
+      _HeightFogColor: {r: 1, g: 1, b: 1, a: 1}
+      _SColor: {r: 0.13394447, g: 0.20092057, b: 0.3301887, a: 1}
+      _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+  m_BuildTextureStacks: []
