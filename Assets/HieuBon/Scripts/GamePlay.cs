@@ -1,6 +1,5 @@
 using ACEPlay.Bridge;
 using DG.Tweening;
-using Duc;
 using System.Collections.Generic;
 using TigerForge;
 using TMPro;
@@ -19,15 +18,15 @@ namespace Hunter
         public GameObject frameRemainingEnemy;
         public int tempChapter;
         public int tempStage;
-        List<Character> tempPoppies;
+        List<GameManager.Character> tempPoppies;
         List<GameController.WeaponType> tempWeaponPoppies;
-        public StageType tempStageType;
+        //public StageType tempStageType;
 
         public void Play()
         {
-            tempStageType = UIController.instance.GetStageType();
+            /*tempStageType = UIController.instance.GetStageType();
             tempChapter = Manager.instance.Chapter;
-            tempStage = Manager.instance.Stage;
+            tempStage = Manager.instance.Stage;*/
             iconComplete.SetActive(false);
             remainingEnemy.DOFade(1f, 0.5f).SetEase(Ease.Linear);
             PlayerController.instance.handTutorial.StopHand();
@@ -61,23 +60,23 @@ namespace Hunter
 
         public void Lose()
         {
-            EventManager.EmitEvent(EventVariables.StopCountDownShowAdsInGame);
-            BridgeController.instance.LogLevelFailWithParameter("stealk", GameManager.instance.LevelStealk);
-            Manager.instance.Stage = 1;
+            //EventManager.EmitEvent(EventVariables.StopCountDownShowAdsInGame);
+            BridgeController.instance.LogLevelFailWithParameter("stealk", GameManager.instance.Level);
+            //Manager.instance.Stage = 1;
 
-            tempPoppies = new List<Character>(Manager.instance.RescuedCharacter);
+            tempPoppies = new List<GameManager. Character>(GameManager.instance.RescuedCharacter);
             tempWeaponPoppies = new List<GameController.WeaponType>(GameManager.instance.WeaponCharacter);
 
-            GameManager.instance.IsStart = false;
+            //GameManager.instance.IsStart = false;
 
-            Manager.instance.RescuedCharacter = new List<Character>();
+            GameManager.instance.RescuedCharacter = new List<GameManager.Character>();
             GameManager.instance.WeaponCharacter = new List<GameController.WeaponType>();
         }
 
         public void LoseProgress()
         {
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.button, 50);
-            FadeManager.instance.BackHome(false, true);
+            //FadeManager.instance.BackHome(false, true);
         }
 
         public void Revival()
@@ -86,7 +85,7 @@ namespace Hunter
             UnityEvent e = new UnityEvent();
             e.AddListener(() =>
             {
-                GameManager.instance.IsStart = true;
+                /*GameManager.instance.IsStart = true;
                 Manager.instance.Stage = tempStage;
                 Manager.instance.RescuedCharacter = tempPoppies;
                 GameManager.instance.WeaponCharacter = tempWeaponPoppies;
@@ -94,7 +93,7 @@ namespace Hunter
                 {
                     GameController.instance.LoadLevel(GameManager.instance.Level);
                     FadeManager.instance.FadeOut();
-                });
+                });*/
             });
             BridgeController.instance.ShowRewarded("revival", e);
         }
@@ -102,12 +101,12 @@ namespace Hunter
         public void UpdateCoin(int coin)
         {
             if (coin == 0) return;
-            EventManager.SetDataGroup(EventVariables.UpdateMission, MissionType.CollectMoney, coin);
-            EventManager.EmitEvent(EventVariables.UpdateMission);
+            /*EventManager.SetDataGroup(EventVariables.UpdateMission, MissionType.CollectMoney, coin);
+            EventManager.EmitEvent(EventVariables.UpdateMission);*/
             BridgeController.instance.LogEarnCurrency("money", coin, "kill_and_ground_stealk");
             PlayerController.instance.takeMoney.TakeOn(coin);
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.coin, 0);
-            UIEconomy.instance.AddCash(coin);
+            //UIEconomy.instance.AddCash(coin);
         }
 
         public void ChangeWeapon(int index)

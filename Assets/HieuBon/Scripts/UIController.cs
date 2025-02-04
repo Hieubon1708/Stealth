@@ -1,7 +1,6 @@
 using ACEPlay.Bridge;
 using Cinemachine;
 using DG.Tweening;
-using Duc;
 using System.Collections;
 using TigerForge;
 using UnityEditor.Experimental.GraphView;
@@ -39,16 +38,16 @@ namespace Hunter
 
         public void Win()
         {
-            EventManager.EmitEvent(EventVariables.StopCountDownShowAdsInGame);
-            BridgeController.instance.LogLevelCompleteWithParameter("stealth", GameManager.instance.LevelStealk);
-            Manager.instance.Stage++;
+            //EventManager.EmitEvent(EventVariables.StopCountDownShowAdsInGame);
+            BridgeController.instance.LogLevelCompleteWithParameter("stealth", GameManager.instance.Level);
+            //Manager.instance.Stage++;
             gamePlay.Win();
         }
 
         public void Play()
         {
-            EventManager.EmitEvent(EventVariables.CountDownShowAdsInGame);
-            UIManager.instance.UIHome.Hide();
+            //EventManager.EmitEvent(EventVariables.CountDownShowAdsInGame);
+            //UIManager.instance.UIHome.Hide();
             GameController.instance.Play();
             virtualCam.CamStartZoom();
             gamePlay.Play();
@@ -66,7 +65,7 @@ namespace Hunter
             virtualCam.ResetCam();
             PlayerController.instance.playerTouchMovement.HideTouch();
 
-            StageType stageType = GetStageType();
+           /* StageType stageType = GetStageType();
             if (!isElevator && stageType != StageType.StealthBoss)
             {
                 layerCover.raycastTarget = false;
@@ -77,19 +76,19 @@ namespace Hunter
             {
                 UIManager.instance.UIHome.Hide();
             }
-            gamePlay.frameRemainingEnemy.SetActive(stageType != StageType.StealthBonus);
+            gamePlay.frameRemainingEnemy.SetActive(stageType != StageType.StealthBonus);*/
         }
 
-        public StageType GetStageType()
+        /*public StageType GetStageType()
         {
             int chapter = Mathf.Min(Manager.instance.Chapter - 1, Manager.instance.levelDataSO.chapters.Count - 1);
             int stage = Manager.instance.Stage - 1;
             return Manager.instance.levelDataSO.chapters[chapter].stages[stage];
-        }
+        }*/
 
         public void ChangeMap()
         {
-            StageType stageType = GetStageType();
+            /*StageType stageType = GetStageType();
             if (stageType == StageType.Tangle)
             {
                 FadeManager.instance.BackHome(true, true);
@@ -119,7 +118,7 @@ namespace Hunter
                         BridgeController.instance.ShowBannerCollapsible();
                     }
                 });
-            }
+            }*/
         }
 
         public void BossEnd()
@@ -152,7 +151,7 @@ namespace Hunter
             {
                 layerCover.raycastTarget = false;
             });
-            UIManager.instance.ShowUIHome();
+            //UIManager.instance.ShowUIHome();
             PlayerController.instance.handTutorial.PlayHand();
         }
 

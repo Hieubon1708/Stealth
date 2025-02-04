@@ -1,6 +1,5 @@
 using ACEPlay.Bridge;
 using DG.Tweening;
-using Duc;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -134,7 +133,7 @@ namespace Hunter
 
         public void Die(Transform killer)
         {
-            if (GameController.instance.bots.Count == 0 && UIController.instance.gamePlay.tempStageType == StageType.StealthBoss || !col.enabled) return;
+            //if (GameController.instance.bots.Count == 0 && UIController.instance.gamePlay.tempStageType == StageType.StealthBoss || !col.enabled) return;
             UIController.instance.virtualCam.StartShakeCam(2.5f);
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.playerDie, 75);
             PlayBlood();

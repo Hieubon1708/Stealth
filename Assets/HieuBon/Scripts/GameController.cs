@@ -1,11 +1,8 @@
 using ACEPlay.Bridge;
 using Cinemachine;
 using DG.Tweening;
-using Duc;
-using Obi;
 using System.Collections.Generic;
 using UnityEngine;
-using static Hunter.GameController;
 
 namespace Hunter
 {
@@ -27,9 +24,8 @@ namespace Hunter
 
         public List<Player> poppies;
         public GameObject[] prePoppies;
-        public List<Character> tempPoppies;
+        public List<GameManager.Character> tempPoppies;
         public List<WeaponType> tempWeaponPoppies;
-        public bool isTempStart;
 
         public CinemachineVirtualCamera camFollow;
         public GameObject map;
@@ -143,11 +139,11 @@ namespace Hunter
             }
         }
 
-        public void LoadLevel(string level)
+        public void LoadLevel(int level)
         {
-            BridgeController.instance.LogLevelStartWithParameter("stealk", GameManager.instance.LevelStealk);
+            BridgeController.instance.LogLevelStartWithParameter("stealk", GameManager.instance.Level);
             AudioController.instance.ResetAudio();
-            BridgeController.instance.Debug_Log(level);
+            BridgeController.instance.Debug_Log(level.ToString());
             poppies.Clear();
             bots.Clear();
             tempWeaponOnGround.Clear();
@@ -162,7 +158,7 @@ namespace Hunter
             }
 
             if (map != null) Destroy(map);
-            map = Instantiate(Resources.Load<GameObject>(level), container);
+            map = Instantiate(Resources.Load<GameObject>(level.ToString()), container);
             PlayerController.instance.ResetGame();
             LoadPoppy();
             for (int i = 0; i < poppies.Count; i++)
@@ -224,9 +220,8 @@ namespace Hunter
 
         void LoadPoppy()
         {
-            tempPoppies = new List<Character>(Manager.instance.RescuedCharacter);
+            tempPoppies = new List<GameManager.Character>(GameManager.instance.RescuedCharacter);
             tempWeaponPoppies = new List<WeaponType>(GameManager.instance.WeaponCharacter);
-            isTempStart = GameManager.instance.IsStart;
             while (tempWeaponPoppies.Count < tempPoppies.Count)
             {
                 tempWeaponPoppies.Add(WeaponType.None);
@@ -234,12 +229,6 @@ namespace Hunter
             GameManager.instance.WeaponCharacter = tempWeaponPoppies;
             for (int i = 0; i < tempPoppies.Count; i++)
             {
-                if (!isTempStart)
-                {
-                    tempWeaponPoppies[i] = WeaponType.Knife;
-                    isTempStart = true;
-                    GameManager.instance.WeaponCharacter = tempWeaponPoppies;
-                }
                 AddPoppy(tempPoppies[i], tempWeaponPoppies[i]);
             }
         }
@@ -325,7 +314,7 @@ namespace Hunter
             return null;
         }
 
-        public Player AddPoppy(Character poppy, WeaponType weaponType)
+        public Player AddPoppy(GameManager.Character poppy, WeaponType weaponType)
         {
             GameObject p = Instantiate(prePoppies[(int)poppy], poolPoppy);
             Player sc = p.GetComponent<Player>();

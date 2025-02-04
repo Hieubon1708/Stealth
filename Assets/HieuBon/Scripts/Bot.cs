@@ -1,5 +1,4 @@
 ﻿using ACEPlay.Bridge;
-using Duc;
 using System.Collections;
 using TigerForge;
 using UnityEngine;
@@ -91,8 +90,8 @@ namespace Hunter
         {
             if (this.hp <= 0)
             {
-                EventManager.SetDataGroup(EventVariables.UpdateMission, this as BossBot ? MissionType.KillBoss : MissionType.KillEnemy, 1);
-                EventManager.EmitEvent(EventVariables.UpdateMission);
+                /*EventManager.SetDataGroup(EventVariables.UpdateMission, this as BossBot ? MissionType.KillBoss : MissionType.KillEnemy, 1);
+                EventManager.EmitEvent(EventVariables.UpdateMission);*/
                 int coin = 0;
                 if(this as NormalBot || this as DemolitionBot)
                 {

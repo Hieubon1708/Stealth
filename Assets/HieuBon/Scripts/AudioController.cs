@@ -1,4 +1,3 @@
-using Duc;
 using TigerForge;
 using UnityEngine;
 
@@ -46,23 +45,23 @@ namespace Hunter
 
         public void Start()
         {
-            EventManager.StartListening(EventVariables.SetMusic, IsPlayMusic);
+            //EventManager.StartListening(EventVariables.SetMusic, IsPlayMusic);
         }
 
         public void IsPlayMusic()
         {
-            srcMusic.mute = Manager.instance.IsMuteMusic;
+            //srcMusic.mute = Manager.instance.IsMuteMusic;
         }
 
         public void PlaySoundNVibrate(AudioClip audioClip, int value)
         {
-            if (!Manager.instance.IsMuteSound) srcSound.PlayOneShot(audioClip);
-            if (value != 0) Vibration.Vibrate(value);
+            //if (!Manager.instance.IsMuteSound) srcSound.PlayOneShot(audioClip);
+            //if (value != 0) Vibration.Vibrate(value);
         }
 
         public void PlayAlert()
         {
-            if (!Manager.instance.IsMuteSound) srcAlert.Play();
+            //if (!Manager.instance.IsMuteSound) srcAlert.Play();
         }
 
         public void StopAlert()
@@ -72,7 +71,7 @@ namespace Hunter
 
         public void PlayTurrel()
         {
-            if (!Manager.instance.IsMuteSound) srcTurrel.Play();
+            //if (!Manager.instance.IsMuteSound) srcTurrel.Play();
         }
 
         public void StopTurrel()
@@ -82,7 +81,7 @@ namespace Hunter
         
         public void PlayElevator()
         {
-            if (!Manager.instance.IsMuteSound) srcElevator.Play();
+            //if (!Manager.instance.IsMuteSound) srcElevator.Play();
         }
 
         public void StopElevator()

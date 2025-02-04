@@ -1,5 +1,4 @@
 using DG.Tweening;
-using Duc;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,7 +55,7 @@ namespace Hunter
                 else
                 {
                     PlayerController.instance.handTutorial.PlayHand();
-                    UIManager.instance.ShowUIHome();
+                    //UIManager.instance.ShowUIHome();
                     DOVirtual.DelayedCall(0.5f, delegate
                     {
                         UIController.instance.layerCover.raycastTarget = false;

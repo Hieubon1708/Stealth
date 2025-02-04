@@ -32,12 +32,12 @@ namespace Hunter
         public void Buy()
         {
             int price = 300;
-            if (Duc.Manager.instance.Money < price) return;
-            Duc.Manager.instance.Money -= price;
+            /*if (Duc.Manager.instance.Money < price) return;
+            Duc.Manager.instance.Money -= price;*/
             BridgeController.instance.LogSpendCurrency("money", price, weaponType.ToString() + "_loot");
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.button, 50);
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.pickUp, 0);
-            Duc.UIEconomy.instance.DisplayTotalCash(true, price);
+            //Duc.UIEconomy.instance.DisplayTotalCash(true, price);
             bum.Play();
             parent.SetActive(false);
             GameController.instance.AddWeapon(weaponType);
@@ -67,7 +67,7 @@ namespace Hunter
                     {
                         isSee = true;
                         button.SetActive(true);
-                        buttonBuy.SetActive(Duc.Manager.instance.Money >= 300);
+                        //buttonBuy.SetActive(Duc.Manager.instance.Money >= 300);
                     }
                 }
                 else if (isSee)

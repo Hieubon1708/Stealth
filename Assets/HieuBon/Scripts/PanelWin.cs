@@ -1,6 +1,5 @@
 using ACEPlay.Bridge;
 using DG.Tweening;
-using Duc;
 using System.Collections.Generic;
 using TigerForge;
 using TMPro;
@@ -23,17 +22,6 @@ namespace Hunter
         public Vector2[] dirs;
         public float[] distances;
         int mul;
-
-        public RectTransform progress;
-        public GameObject objTangle;
-        public GameObject objStealthNormal;
-        public GameObject objStealthElite;
-        public GameObject objStealthBonus;
-        public GameObject objStealthBoss;
-        public Slider levelProgress;
-        public HorizontalLayoutGroup gridProgress;
-        private List<GameObject> spawnedStages = new List<GameObject>();
-
         int dollarAward = 30;
 
         public void OnEnable()
@@ -41,18 +29,6 @@ namespace Hunter
             ACEPlay.Native.NativeAds.instance.DisplayNativeAds(true);
             ACEPlay.Bridge.BridgeController.instance.ShowBannerCollapsible();
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.win, 0);
-            if (gridProgress.transform.childCount > 0)
-            {
-                for (int i = 0; i < gridProgress.transform.childCount; i++)
-                {
-                    Destroy(gridProgress.transform.GetChild(i).gameObject);
-                }
-            }
-            spawnedStages.Clear();
-            DOVirtual.DelayedCall(0.1f, delegate
-            {
-                ShowLevelProgress();
-            });
             textDollar.text = 0.ToString();
             textDollar.color = Color.white;
             iconDollar.enabled = true;
@@ -100,8 +76,8 @@ namespace Hunter
                 randomDistances.Add(tempDistances[indexRandom]);
                 tempDistances.RemoveAt(indexRandom);
             }*/
-            EventManager.SetDataGroup(EventVariables.UpdateMission, MissionType.CollectMoney, dollarAward);
-            EventManager.EmitEvent(EventVariables.UpdateMission);
+            /*EventManager.SetDataGroup(EventVariables.UpdateMission, MissionType.CollectMoney, dollarAward);
+            EventManager.EmitEvent(EventVariables.UpdateMission);*/
             textDollar.transform.DOScale(1.35f, 0.1f).SetEase(Ease.Linear);
             textDollar.transform.DOScale(1f, 0.1f).SetEase(Ease.Linear).SetDelay(0.5f);
             DOVirtual.Int(dollarAward, 0, 0.25f, (c) =>
@@ -109,7 +85,7 @@ namespace Hunter
                 textDollar.text = c.ToString();
             }).OnComplete(delegate
             {
-                UIEconomy.instance.AddCash(dollarAward, iconDollar.transform);
+                //UIEconomy.instance.AddCash(dollarAward, iconDollar.transform);
                 iconDollar.enabled = false;
                 textDollar.DOFade(0f, 0.1f).SetEase(Ease.Linear);
                 /*for (int i = 0; i < dollarChildren.Length; i++)
@@ -152,76 +128,6 @@ namespace Hunter
                     x.text = "x2";
                 }
             });
-        }
-
-        public void ShowLevelProgress()
-        {
-            int chapter = Mathf.Min(UIController.instance.gamePlay.tempChapter, Manager.instance.levelDataSO.chapters.Count);
-            int stage = UIController.instance.gamePlay.tempStage;
-
-            Chapter currentChapter = Manager.instance.levelDataSO.chapters[chapter - 1];
-
-            levelProgress.minValue = 1;
-            levelProgress.maxValue = currentChapter.stages.Count;
-            levelProgress.value = stage;
-
-            float sizeX = Mathf.Min(currentChapter.stages.Count + 1, 6) * 100f;
-            progress.sizeDelta = new Vector2(sizeX, progress.sizeDelta.y);
-
-            gridProgress.spacing = sizeX / (currentChapter.stages.Count - 1);
-
-            foreach (var stageType in currentChapter.stages)
-            {
-                GameObject newObj;
-                switch (stageType)
-                {
-                    case StageType.Tangle:
-                        newObj = objTangle.Spawn(gridProgress.transform);
-                        newObj.transform.localScale = Vector3.one;
-                        spawnedStages.Add(newObj);
-                        break;
-                    case StageType.StealthNormal:
-                        newObj = objStealthNormal.Spawn(gridProgress.transform);
-                        newObj.transform.localScale = Vector3.one;
-                        spawnedStages.Add(newObj);
-                        break;
-                    case StageType.StealthElite:
-                        newObj = objStealthElite.Spawn(gridProgress.transform);
-                        newObj.transform.localScale = Vector3.one;
-                        spawnedStages.Add(newObj);
-                        break;
-                    case StageType.StealthBoss:
-                        newObj = objStealthBoss.Spawn(gridProgress.transform);
-                        newObj.transform.localScale = Vector3.one;
-                        spawnedStages.Add(newObj);
-                        break;
-                    case StageType.StealthBonus:
-                        newObj = objStealthBonus.Spawn(gridProgress.transform);
-                        newObj.transform.localScale = Vector3.one;
-                        spawnedStages.Add(newObj);
-                        break;
-                }
-            }
-
-            for (int i = 0; i < spawnedStages.Count; i++)
-            {
-                spawnedStages[i].transform.localScale = Vector3.one;
-
-                if (i < (stage - 1))
-                {
-                    spawnedStages[i].GetComponentInChildren<Image>().color = Color.green;
-                }
-                else if (i == (stage - 1))
-                {
-                    spawnedStages[i].GetComponentInChildren<Image>().color = Color.yellow;
-                }
-                else
-                {
-                    spawnedStages[i].GetComponentInChildren<Image>().color = Color.white;
-                }
-            }
-
-            spawnedStages[stage - 1].transform.DOScale(1.2f, 1f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Duc;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -523,8 +522,8 @@ namespace ACEPlay.Bridge
                 return;
             }
 
-            EventManager.SetDataGroup(EventVariables.UpdateMission, MissionType.WatchAds, 1);
-            EventManager.EmitEvent(EventVariables.UpdateMission);
+            /*EventManager.SetDataGroup(EventVariables.UpdateMission, MissionType.WatchAds, 1);
+            EventManager.EmitEvent(EventVariables.UpdateMission);*/
 
             Debug.LogError("=====Rewarded Show success!=====");
             if (onRewarded != null) onRewarded.Invoke();
