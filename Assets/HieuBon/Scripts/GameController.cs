@@ -24,8 +24,6 @@ namespace Hunter
 
         public List<Player> poppies;
         public GameObject[] prePoppies;
-        public List<GameManager.Character> tempPoppies;
-        public List<WeaponType> tempWeaponPoppies;
 
         public CinemachineVirtualCamera camFollow;
         public GameObject map;
@@ -39,7 +37,6 @@ namespace Hunter
         public Alarm[] alarms;
         public ObjectBroken[] objectBrokens;
         public Transform container;
-        public Dictionary<GameObject, WeaponType> tempWeaponOnGround = new Dictionary<GameObject, WeaponType>();
         public ParticleSystem fxBum;
 
 
@@ -48,22 +45,6 @@ namespace Hunter
             instance = this;
             camUI.enabled = false;
             camUI.enabled = true;
-        }
-
-        public PoppyType GetPoppyByIndex(int index)
-        {
-            switch (index)
-            {
-                case 0: return PoppyType.Poppy;
-                case 1: return PoppyType.Bobby;
-                case 2: return PoppyType.Bubba;
-                case 3: return PoppyType.Catnap;
-                case 4: return PoppyType.Craftycorn;
-                case 5: return PoppyType.Hoppy;
-                case 6: return PoppyType.Kickin;
-                case 7: return PoppyType.Pickypiggy;
-                default: return PoppyType.Poppy;
-            }
         }
 
         public void Start()
@@ -146,7 +127,6 @@ namespace Hunter
             BridgeController.instance.Debug_Log(level.ToString());
             poppies.Clear();
             bots.Clear();
-            tempWeaponOnGround.Clear();
             PlayerController.instance.ResetFxDollars();
             for (int i = 0; i < poolEnemy.childCount; i++)
             {
@@ -190,13 +170,11 @@ namespace Hunter
             {
                 if (poppies[i].weapon == null)
                 {
-                    tempWeaponOnGround.Add(poppies[i].gameObject, weaponType);
                     LoadWeaponPoppy(weaponType, poppies[i]);
                     return;
                 }
             }
             int indexRandom = Random.Range(0, poppies.Count);
-            tempWeaponOnGround.Add(poppies[indexRandom].gameObject, weaponType);
             LoadWeaponPoppy(weaponType, poppies[indexRandom]);
         }
 
@@ -220,17 +198,6 @@ namespace Hunter
 
         void LoadPoppy()
         {
-            tempPoppies = new List<GameManager.Character>(GameManager.instance.RescuedCharacter);
-            tempWeaponPoppies = new List<WeaponType>(GameManager.instance.WeaponCharacter);
-            while (tempWeaponPoppies.Count < tempPoppies.Count)
-            {
-                tempWeaponPoppies.Add(WeaponType.None);
-            }
-            GameManager.instance.WeaponCharacter = tempWeaponPoppies;
-            for (int i = 0; i < tempPoppies.Count; i++)
-            {
-                AddPoppy(tempPoppies[i], tempWeaponPoppies[i]);
-            }
         }
 
         public bool IsBoss()
@@ -258,10 +225,7 @@ namespace Hunter
             {
                 Debug.LogError("!!! " + poppy.name);
                 Debug.LogError("Poppies Count " + poppies.Count);
-                Debug.LogError("TempPoppies Count " + tempPoppies.Count);
             }
-            tempPoppies.RemoveAt(indexOf);
-            tempWeaponPoppies.RemoveAt(indexOf);
             poppies.Remove(poppy);
             if (poppies.Count == 0)
             {
@@ -342,7 +306,6 @@ namespace Hunter
                 fxBum.transform.position = new Vector3(pos.x, pos.y + 1, pos.z);
                 player.weapon.gameObject.SetActive(false);
                 fxBum.Play();
-                tempWeaponOnGround.Add(poppies[0].gameObject, player.weapon.weaponType);
                 LoadWeaponPoppy(player.weapon.weaponType, poppies[0]);
             }
         }

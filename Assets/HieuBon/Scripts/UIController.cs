@@ -2,11 +2,9 @@ using ACEPlay.Bridge;
 using Cinemachine;
 using DG.Tweening;
 using System.Collections;
-using TigerForge;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
+using static Hunter.GameManager;
 
 namespace Hunter
 {
@@ -65,26 +63,23 @@ namespace Hunter
             virtualCam.ResetCam();
             PlayerController.instance.playerTouchMovement.HideTouch();
 
-           /* StageType stageType = GetStageType();
+            StageType stageType = GetStageType();
             if (!isElevator && stageType != StageType.StealthBoss)
             {
-                layerCover.raycastTarget = false;
-                UIManager.instance.ShowUIHome();
+                //UIManager.instance.ShowUIHome();
                 PlayerController.instance.handTutorial.PlayHand();
             }
             else
             {
-                UIManager.instance.UIHome.Hide();
+                //UIManager.instance.UIHome.Hide();
             }
-            gamePlay.frameRemainingEnemy.SetActive(stageType != StageType.StealthBonus);*/
+            gamePlay.frameRemainingEnemy.SetActive(stageType != StageType.StealthBonus);
         }
 
-        /*public StageType GetStageType()
+        public StageType GetStageType()
         {
-            int chapter = Mathf.Min(Manager.instance.Chapter - 1, Manager.instance.levelDataSO.chapters.Count - 1);
-            int stage = Manager.instance.Stage - 1;
-            return Manager.instance.levelDataSO.chapters[chapter].stages[stage];
-        }*/
+            return GameManager.instance.levelDataSO.levelTypes[GameManager.instance.Level];
+        }
 
         public void ChangeMap()
         {
@@ -147,10 +142,6 @@ namespace Hunter
             yield return new WaitForSeconds(2f);
             cam.Priority = 1;
             yield return new WaitForSeconds(1f);
-            DOVirtual.DelayedCall(0.5f, delegate
-            {
-                layerCover.raycastTarget = false;
-            });
             //UIManager.instance.ShowUIHome();
             PlayerController.instance.handTutorial.PlayHand();
         }

@@ -11,10 +11,11 @@ namespace Hunter
 
         public const int totalLevel = 17;
 
+        public LevelDataSO levelDataSO;
+
         private void Awake()
         {
             instance = this;
-            RescuedCharacter = new List<Character>() { Character.Bobby };
         }
 
         public enum StageType
@@ -61,54 +62,14 @@ namespace Hunter
             }
         }
 
-        public List<GameController.WeaponType> WeaponCharacter
-        {
-            get
-            {
-                string txt = PlayerPrefs.GetString("WeaponCharacter", string.Empty);
-                if (!string.IsNullOrEmpty(txt))
-                {
-                    return JsonConvert.DeserializeObject<List<GameController.WeaponType>>(txt);
-                }
-                return new List<GameController.WeaponType>();
-            }
-            set
-            {
-                string txt = JsonConvert.SerializeObject(value);
-                PlayerPrefs.SetString("WeaponCharacter", txt);
-            }
-        }
-
-        public List<Character> RescuedCharacter
-        {
-            get
-            {
-                string txt = PlayerPrefs.GetString("RescuedCharacter", string.Empty);
-                if (!string.IsNullOrEmpty(txt))
-                {
-                    return JsonConvert.DeserializeObject<List<Character>>(txt);
-                }
-
-                return new List<Character>();
-            }
-            set
-            {
-                string txt = JsonConvert.SerializeObject(value);
-                PlayerPrefs.SetString("RescuedCharacter", txt);
-            }
-        }
-
         public enum Character
         {
-            Poppy = 0,
-            Bobby = 1,
+            Male = 0,
+            Female = 1,
         }
 
         public void Win()
         {
-            RescuedCharacter = GameController.instance.tempPoppies;
-            WeaponCharacter = GameController.instance.tempWeaponPoppies;
-            //IsStart = GameController.instance.isTempStart;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Hunter
 
         public void PlayHand()
         {
-            float time = paths == null ? 0.5f : 0f; 
+            float time = paths == null ? 0.5f : 0f;
             DOVirtual.DelayedCall(time, delegate
             {
                 if (paths == null)
@@ -52,12 +52,14 @@ namespace Hunter
 
         public void Show()
         {
+            UIController.instance.layerCover.raycastTarget = false;
             canvasGroup.DOFade(1f, 0.5f).SetEase(Ease.Linear);
         }
 
         public void StopHand()
         {
             hand.DOKill();
+            canvasGroup.DOKill(true);
             canvasGroup.alpha = 0f;
         }
     }

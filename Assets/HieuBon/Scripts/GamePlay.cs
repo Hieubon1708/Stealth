@@ -1,7 +1,5 @@
 using ACEPlay.Bridge;
 using DG.Tweening;
-using System.Collections.Generic;
-using TigerForge;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,17 +14,9 @@ namespace Hunter
         public GameObject panelLose;
         public GameObject panelWin;
         public GameObject frameRemainingEnemy;
-        public int tempChapter;
-        public int tempStage;
-        List<GameManager.Character> tempPoppies;
-        List<GameController.WeaponType> tempWeaponPoppies;
-        //public StageType tempStageType;
 
         public void Play()
         {
-            /*tempStageType = UIController.instance.GetStageType();
-            tempChapter = Manager.instance.Chapter;
-            tempStage = Manager.instance.Stage;*/
             iconComplete.SetActive(false);
             remainingEnemy.DOFade(1f, 0.5f).SetEase(Ease.Linear);
             PlayerController.instance.handTutorial.StopHand();
@@ -49,34 +39,17 @@ namespace Hunter
 
         public void Win()
         {
-            for (int i = 0; i < GameController.instance.poppies.Count; i++)
-            {
-                if (GameController.instance.tempWeaponOnGround.ContainsKey(GameController.instance.poppies[i].gameObject))
-                {
-                    GameController.instance.tempWeaponPoppies[i] = GameController.instance.tempWeaponOnGround[GameController.instance.poppies[i].gameObject];
-                }
-            }
         }
 
         public void Lose()
         {
             //EventManager.EmitEvent(EventVariables.StopCountDownShowAdsInGame);
             BridgeController.instance.LogLevelFailWithParameter("stealk", GameManager.instance.Level);
-            //Manager.instance.Stage = 1;
-
-            tempPoppies = new List<GameManager. Character>(GameManager.instance.RescuedCharacter);
-            tempWeaponPoppies = new List<GameController.WeaponType>(GameManager.instance.WeaponCharacter);
-
-            //GameManager.instance.IsStart = false;
-
-            GameManager.instance.RescuedCharacter = new List<GameManager.Character>();
-            GameManager.instance.WeaponCharacter = new List<GameController.WeaponType>();
         }
 
         public void LoseProgress()
         {
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.button, 50);
-            //FadeManager.instance.BackHome(false, true);
         }
 
         public void Revival()
@@ -115,7 +88,6 @@ namespace Hunter
             if (index == 1) weaponType = GameController.WeaponType.Gun;
             for (int i = 0; i < GameController.instance.poppies.Count; i++)
             {
-                GameController.instance.tempWeaponPoppies[i] = weaponType;
                 GameController.instance.weaponEquip.Equip(GameController.instance.poppies[i], weaponType);
             }
         }

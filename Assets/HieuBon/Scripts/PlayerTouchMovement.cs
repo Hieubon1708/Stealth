@@ -71,7 +71,7 @@ namespace Hunter
 
         public void HandleFingerDown()
         {
-            if (PlayerController.instance.handTutorial.canvasGroup.alpha == 1)
+            if (PlayerController.instance.handTutorial.canvasGroup.alpha != 0)
             {
                 UnityEvent e = new UnityEvent();
                 e.AddListener(() =>

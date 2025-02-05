@@ -2,10 +2,15 @@
 
 public class Test : MonoBehaviour
 {
-    public Animator ani;
+    public Transform pre;
 
     public void Start()
     {
-        ani.SetBool("Walking", true);
+        Transform[] transforms = pre.GetChild(0).GetComponentsInChildren<Transform>();
+
+        for (int i = 0; i < transforms.Length; i++)
+        {
+            transforms[i].name = "mixamorig:" + transforms[i].name;
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace Hunter
     {
         CanvasScaler canvasScaler;
         Canvas canvas;
-
+        public bool isCameraMain;
         private float width;
         private float height;
 
@@ -27,7 +27,7 @@ namespace Hunter
             }
 
             canvas = GetComponent<Canvas>();
-            canvas.worldCamera = GameController.instance.camUI;
+            canvas.worldCamera = isCameraMain ? GameController.instance.cam : GameController.instance.camUI;
         }
     }
 }
