@@ -198,6 +198,7 @@ namespace Hunter
 
         void LoadPoppy()
         {
+            AddPoppy(GameManager.Character.Male, WeaponType.None);
         }
 
         public bool IsBoss()

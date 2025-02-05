@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3423,8 +3423,6 @@ MonoBehaviour:
   panelLose: {fileID: 227474479}
   panelWin: {fileID: 1150409956}
   frameRemainingEnemy: {fileID: 1352031900}
-  tempChapter: 0
-  tempStage: 0
 --- !u!1 &801745039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,8 +7515,6 @@ MonoBehaviour:
   prePoppies:
   - {fileID: 4708460396495754227, guid: fe61b5af7bad17e43abf524cf1957ca7, type: 3}
   - {fileID: 2194452865610335691, guid: e1ac30ff66a09fd40868514e453b991e, type: 3}
-  tempPoppies: 
-  tempWeaponPoppies: 
   camFollow: {fileID: 4454412736901706054}
   map: {fileID: 0}
   isAlert: 0

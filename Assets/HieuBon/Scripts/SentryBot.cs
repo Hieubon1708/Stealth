@@ -362,7 +362,7 @@ namespace Hunter
                 Vector3 dir = transform.position - PlayerController.instance.transform.position;
                 for (int i = 0; i < rbs.Length; i++)
                 {
-                    rbs[i].AddForce(new Vector3(dir.x, dir.y + 1, dir.z) * 7, ForceMode.Impulse);
+                    rbs[i].AddForce(new Vector3(dir.x, dir.y + 1, dir.z) * 5, ForceMode.Impulse);
                 }
 
                 GameController.instance.RemoveBot(gameObject);

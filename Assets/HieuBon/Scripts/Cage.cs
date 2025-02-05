@@ -1,0 +1,65 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Hunter
+{
+    public class Cage : MonoBehaviour
+    {
+        public Rigidbody[] rbs;
+        public MeshCollider[] cols;
+        public ParticleSystem bum;
+        public Player player;
+        public AnimationClip hostageAni;
+        AnimationClip idle;
+
+        void Awake()
+        {
+            AnimatorOverrideController overrideController = new AnimatorOverrideController(player.animator.runtimeAnimatorController);
+            idle = overrideController["Idle"];
+            overrideController["Idle"] = hostageAni;
+            player.animator.runtimeAnimatorController = overrideController;
+        }
+
+        public virtual void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                bum.Play();
+                player.col.enabled = true;
+                player.outline.enabled = true;
+                AnimatorOverrideController overrideController = new AnimatorOverrideController(player.animator.runtimeAnimatorController);
+                overrideController["Idle"] = idle;
+                player.animator.runtimeAnimatorController = overrideController;
+                player.ResetPlayer();
+                GameController.instance.poppies.Add(player);
+                AIManager.Instance.Init();
+                AudioController.instance.PlaySoundNVibrate(AudioController.instance.objectBrocken, 0);
+                gameObject.SetActive(false);
+                for (int i = 0; i < rbs.Length; i++)
+                {
+                    rbs[i].gameObject.SetActive(true);
+                    rbs[i].AddExplosionForce(500, other.transform.position, Vector3.Distance(rbs[i].transform.position, other.transform.position));
+                }
+                Invoke(nameof(Drop), 3.5f);
+            }
+        }
+
+        public void Drop()
+        {
+            for (int i = 0; i < cols.Length; i++)
+            {
+                cols[i].enabled = false;
+            }
+            Invoke(nameof(Hide), 3.5f);
+        }
+
+        void Hide()
+        {
+            for (int i = 0; i < rbs.Length; i++)
+            {
+                rbs[i].gameObject.SetActive(false);
+            }
+        }
+    }
+}
