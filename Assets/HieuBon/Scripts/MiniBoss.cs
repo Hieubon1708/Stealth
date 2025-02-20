@@ -14,7 +14,7 @@ namespace Hunter
         Coroutine dodging;
         public Health health;
 
-        public void Start()
+        public override void Start()
         {
             bullets = new Bullet[amountBullet];
             for (int i = 0; i < amountBullet; i++)
@@ -23,6 +23,7 @@ namespace Hunter
                 bullets[i] = b.GetComponent<Bullet>();
                 b.SetActive(false);
             }
+            base.Start();
         }
 
         void StartDodging(Transform killer)

@@ -10,24 +10,20 @@ namespace Hunter
         public Bot bot;
         float startSize;
         public bool isLookAtCamera;
+        float startHp;
 
         public void Awake()
         {
             startSize = healthBar.sizeDelta.x;
         }
 
-        public void ResetHealth()
-        {
-            healthBar.sizeDelta = new Vector2(startSize, healthBar.sizeDelta.y);
-            healthDamagerBar.sizeDelta = new Vector2(startSize, healthDamagerBar.sizeDelta.y);
-        }
-
         public void SubtractHp()
         {
-            healthBar.DOComplete();
-            healthDamagerBar.DOComplete();
-            healthBar.DOSizeDelta(new Vector2((float)bot.hp / bot.startHp * startSize, healthBar.sizeDelta.y), 0.25f);
-            healthDamagerBar.DOSizeDelta(new Vector2((float)bot.hp / bot.startHp * startSize, healthDamagerBar.sizeDelta.y), 0.25f).SetDelay(0.25f);
+            if (startHp == 0) startHp = bot.hp;
+            healthBar.DOKill();
+            healthDamagerBar.DOKill();
+            healthBar.DOSizeDelta(new Vector2((float)bot.hp / startHp * startSize, healthBar.sizeDelta.y), 0.25f);
+            healthDamagerBar.DOSizeDelta(new Vector2((float)bot.hp / startHp * startSize, healthDamagerBar.sizeDelta.y), 0.25f).SetDelay(0.25f);
         }
 
         private void OnDestroy()

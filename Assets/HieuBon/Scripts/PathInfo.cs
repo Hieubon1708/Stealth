@@ -4,6 +4,7 @@ namespace Hunter
 {
     public class PathInfo : MonoBehaviour
     {
+        public int hp;
         public GameController.BotType botType;
         public GameController.PathType pathType;
         public GameObject prefab;      

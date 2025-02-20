@@ -1165,8 +1165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5c39b5d980a3546bf7c98e6d3c8567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHp: 100
-  hp: 0
+  startHp: 1
+  hp: 1
   radarView: {fileID: 8992672557156733072}
   animator: {fileID: 2644489094915113265}
   navMeshAgent: {fileID: 93672074432398736}

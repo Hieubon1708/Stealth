@@ -21,8 +21,9 @@ namespace Hunter
         public GameObject target;
         List<GameObject> allies = new List<GameObject>();
         LayerMask rayLayer;
+        protected BotHealth health;
 
-        private void Start()
+        public virtual void Start()
         {
             rayLayer = LayerMask.GetMask("Wall", "Player");
         }
@@ -359,10 +360,10 @@ namespace Hunter
                 IsKinematic(false);
                 StartCoroutine(Die());
 
-                Vector3 dir = transform.position - PlayerController.instance.transform.position;
+                Vector3 dir = (transform.position - PlayerController.instance.transform.position).normalized;
                 for (int i = 0; i < rbs.Length; i++)
                 {
-                    rbs[i].AddForce(new Vector3(dir.x, dir.y + 1, dir.z) * 5, ForceMode.Impulse);
+                    rbs[i].AddForce(new Vector3(dir.x, dir.y, dir.z) * 15, ForceMode.Impulse);
                 }
 
                 GameController.instance.RemoveBot(gameObject);
@@ -380,7 +381,7 @@ namespace Hunter
             isFind = false;
             radarView.SetColor(false);
             questionRotate.transform.localScale = Vector3.zero;
-            hp = startHp;
+            hp = pathInfo.hp;
             indexPath = 0;
             IsKinematic(true);
             col.enabled = true;

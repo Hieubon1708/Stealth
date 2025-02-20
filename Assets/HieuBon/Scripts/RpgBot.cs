@@ -162,7 +162,6 @@ namespace Hunter
 
         public override void ResetBot()
         {
-            hp = startHp;
             indexPath = 0;
             IsKinematic(true);
             col.enabled = true;

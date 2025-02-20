@@ -7,6 +7,7 @@ namespace Hunter
 {
     public class BossBot : Bot
     {
+        public int startHp;
         public GameObject arrow;
         Coroutine run;
         public Health health;
@@ -150,10 +151,10 @@ namespace Hunter
                 arrow.SetActive(false);
                 IsKinematic(false);
                 BossEnd();
-                Vector3 dir = transform.position - PlayerController.instance.transform.position;
+                Vector3 dir = (transform.position - PlayerController.instance.transform.position).normalized;
                 for (int i = 0; i < rbs.Length; i++)
                 {
-                    rbs[i].AddForce(new Vector3(dir.x, dir.y + 1, dir.z) * 7, ForceMode.Impulse);
+                    rbs[i].AddForce(new Vector3(dir.x, dir.y, dir.z) * 10, ForceMode.Impulse);
                 }
                 GameController.instance.RemoveBot(gameObject);
                 UIController.instance.gamePlay.UpdateRemainingEnemy();

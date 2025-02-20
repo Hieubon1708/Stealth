@@ -2185,6 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d6c162ae9a1ff42857f78947e2519c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodIcons: []
 --- !u!1 &8414306707801670452
 GameObject:
   m_ObjectHideFlags: 0

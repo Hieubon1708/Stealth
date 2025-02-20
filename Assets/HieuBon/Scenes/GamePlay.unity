@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5692,7 +5692,7 @@ GameObject:
   - component: {fileID: 1256355413}
   - component: {fileID: 1256355412}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7528,6 +7528,13 @@ MonoBehaviour:
   objectBrokens: []
   container: {fileID: 1587366046}
   fxBum: {fileID: 1743062107}
+  preBotHealths:
+  - {fileID: 5787545041876263544, guid: abf59fc9a5ece8a4fb61631a8a6c1407, type: 3}
+  - {fileID: 3047942071862115445, guid: 1c18ebdafe53c09409652244b970dc5d, type: 3}
+  - {fileID: 8800231279279154828, guid: 44ea7b9d82bcd9b4bb8afc47f9f44d68, type: 3}
+  - {fileID: 1081672233886844480, guid: 8e18851df19bb124ab218e855d2cc16d, type: 3}
+  - {fileID: 5148006865908652471, guid: 6f2004e18dd92574190315cc9863db9c, type: 3}
+  - {fileID: 77031230583387873, guid: a3978605b036f604d98e6cde668dcb49, type: 3}
 --- !u!114 &1587366048
 MonoBehaviour:
   m_ObjectHideFlags: 0

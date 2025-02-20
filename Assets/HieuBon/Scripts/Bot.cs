@@ -8,7 +8,6 @@ namespace Hunter
 {
     public abstract class Bot : MonoBehaviour
     {
-        public int startHp;
         public int hp;
         protected int indexPath;
 

@@ -38,6 +38,7 @@ namespace Hunter
         public ObjectBroken[] objectBrokens;
         public Transform container;
         public ParticleSystem fxBum;
+        public GameObject[] preBotHealths;
 
 
         public void Awake()

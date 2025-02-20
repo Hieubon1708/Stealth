@@ -1,17 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hunter
 {
     public class Cage : MonoBehaviour
     {
-        public Rigidbody[] rbs;
-        public MeshCollider[] cols;
         public ParticleSystem bum;
+        public MeshCollider[] cols;
+        public Rigidbody[] rbs;
         public Player player;
         public AnimationClip hostageAni;
         AnimationClip idle;
+        public GameObject old;
 
         void Awake()
         {
@@ -32,15 +31,14 @@ namespace Hunter
                 overrideController["Idle"] = idle;
                 player.animator.runtimeAnimatorController = overrideController;
                 player.ResetPlayer();
+                for (int i = 0; i < rbs.Length; i++)
+                {
+                    rbs[i].isKinematic = false;
+                }
                 GameController.instance.poppies.Add(player);
                 AIManager.Instance.Init();
                 AudioController.instance.PlaySoundNVibrate(AudioController.instance.objectBrocken, 0);
-                gameObject.SetActive(false);
-                for (int i = 0; i < rbs.Length; i++)
-                {
-                    rbs[i].gameObject.SetActive(true);
-                    rbs[i].AddExplosionForce(500, other.transform.position, Vector3.Distance(rbs[i].transform.position, other.transform.position));
-                }
+                old.SetActive(false);
                 Invoke(nameof(Drop), 3.5f);
             }
         }

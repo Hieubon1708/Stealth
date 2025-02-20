@@ -16,7 +16,7 @@ namespace Hunter
         bool isThrowing;
         public Transform hand;
         DemolitionWeapon demolitionWeapon;
-        public void Start()
+        public override void Start()
         {
             demolitionWeapons = new DemolitionWeapon[amount];
             for (int i = 0; i < amount; i++)
@@ -25,6 +25,7 @@ namespace Hunter
                 b.SetActive(false);
                 demolitionWeapons[i] = b.GetComponent<DemolitionWeapon>();
             }
+            base.Start();
         }
 
         public void Throw()
