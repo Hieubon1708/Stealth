@@ -1283,7 +1283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5c39b5d980a3546bf7c98e6d3c8567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHp: 100
   hp: 0
   radarView: {fileID: 3625490967339480511}
   animator: {fileID: 4550739845891583865}
@@ -1297,8 +1296,8 @@ MonoBehaviour:
   time: 0.75
   speed: 2
   rotateSpeed: 2
-  detectSpeed: 4
-  rotateDetectSpeed: 4
+  detectSpeed: 3
+  rotateDetectSpeed: 3
   isKilling: 0
   isDodging: 0
   weapon: {fileID: 2539389715554212034}

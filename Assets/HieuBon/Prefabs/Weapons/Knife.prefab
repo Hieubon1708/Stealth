@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 1
   attackRange: 7
-  damage: 100
+  damage: 1
   outline: {fileID: 1441375482031156391}
   meshRenderer: {fileID: 8118873572885367427}
   defaultMaterial: {fileID: 2100000, guid: 8e17ee7389c709b40b4fe9fff174bf7c, type: 2}

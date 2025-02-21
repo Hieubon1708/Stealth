@@ -78,7 +78,7 @@ namespace Hunter
                         isAttack = true;
                         lookAt = other.gameObject;
                         animator.SetTrigger("Hit");
-                        PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 3.5f;
+                        PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 5.5f;
                         delayKill = DOVirtual.DelayedCall(0.35f, delegate
                         {
                             isAttack = false;
@@ -148,7 +148,6 @@ namespace Hunter
             animator.enabled = false;
             navMeshAgent.enabled = false;
             IsKinematic(false);
-            GameController.instance.SwitchWeapon(this);
             Vector3 dir = transform.position - killer.position;
             for (int i = 0; i < rbs.Length; i++)
             {

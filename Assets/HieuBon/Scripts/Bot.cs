@@ -82,7 +82,6 @@ namespace Hunter
         public void ChangeSpeed(float speed, float rotateSpeed)
         {
             navMeshAgent.speed = speed;
-            navMeshAgent.speed = rotateSpeed;
         }
 
         public virtual void SubtractHp(int hp, Transform killer)

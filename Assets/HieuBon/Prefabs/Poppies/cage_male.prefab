@@ -172,11 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf4205446bec9240adefa89d8a24af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pieces: []
-  targetRotations: []
   bum: {fileID: 7535211920676692750}
+  cols: []
+  rbs: []
   player: {fileID: 0}
   hostageAni: {fileID: 0}
+  old: {fileID: 0}
 --- !u!1 &2859584401011977214
 GameObject:
   m_ObjectHideFlags: 0

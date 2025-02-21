@@ -39,6 +39,7 @@ namespace Hunter
 
         public void Win()
         {
+     
         }
 
         public void Lose()

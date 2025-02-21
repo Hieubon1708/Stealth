@@ -91,11 +91,10 @@ namespace Hunter
                 navMeshAgent.isStopped = true;
                 animator.SetBool("Walking", false);
                 target = radarView.target;
-                //transform.LookAt(target.transform.position);
 
                 Vector3 targetDirection = target.transform.position - transform.position;
                 Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 3.5f);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 7.5f);
                 float angle = Quaternion.Angle(transform.rotation, targetRotation);
                 if (angle < 5)
                 {
@@ -127,7 +126,7 @@ namespace Hunter
                         if (target == null) target = hit.collider.gameObject;
                         Vector3 targetDirection = target.transform.position - transform.position;
                         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 3.5f);
+                        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 7.5f);
                         StopHear();
                         StopLastTrace();
                         StopLostTrack();
@@ -135,7 +134,6 @@ namespace Hunter
                         animator.SetBool("Walking", true);
                         navMeshAgent.destination = hit.transform.position;
                         BridgeController.instance.Debug_LogError("Đã thấy " + hit.collider.name, false);
-
                     }
                     else if (target != null)
                     {
@@ -338,15 +336,20 @@ namespace Hunter
         {
             if (this.hp <= 0) return;
             this.hp = Mathf.Clamp(this.hp - hp, 0, this.hp);
+            if (health != null) health.SubtractHp(this.hp);
+            ChangeSpeed(detectSpeed, rotateDetectSpeed);
+            StopHear();
+            StopProbe();
+            StopLastTrace();
+            StopLostTrack();
+
+            isFind = true;
+            target = killer.gameObject;
             PlayBlood();
             if (this.hp <= 0)
             {
                 AudioController.instance.PlaySoundNVibrate(AudioController.instance.enemyDie, 50);
-                StopHear();
-                StopProbe();
                 StopAttack();
-                StopLastTrace();
-                StopLostTrack();
 
                 UIController.instance.HitEffect();
                 UIController.instance.virtualCam.StartShakeCam(5);
@@ -363,7 +366,7 @@ namespace Hunter
                 Vector3 dir = (transform.position - PlayerController.instance.transform.position).normalized;
                 for (int i = 0; i < rbs.Length; i++)
                 {
-                    rbs[i].AddForce(new Vector3(dir.x, dir.y, dir.z) * 15, ForceMode.Impulse);
+                    rbs[i].AddForce(new Vector3(dir.x, dir.y, dir.z) * 5, ForceMode.Impulse);
                 }
 
                 GameController.instance.RemoveBot(gameObject);

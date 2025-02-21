@@ -8,7 +8,6 @@ namespace Hunter
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Character") || collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("BlastZone"))
             {
-                Debug.LogError(collision.gameObject.name);
                 AudioController.instance.PlaySoundNVibrate(AudioController.instance.glassBrocken, 0);
                 gameObject.SetActive(false);
                 for (int i = 0; i < rbs.Length; i++)
@@ -24,7 +23,6 @@ namespace Hunter
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Character") || other.CompareTag("Bullet") || other.CompareTag("BlastZone"))
             {
-                Debug.LogError(other.gameObject.name);
                 AudioController.instance.PlaySoundNVibrate(AudioController.instance.glassBrocken, 0);
                 gameObject.SetActive(false);
                 for (int i = 0; i < rbs.Length; i++)

@@ -18,11 +18,11 @@ namespace Hunter
             Player player = GameController.instance.GetPoppy(target);
             animator.SetTrigger("Aiming");
             animator.SetTrigger("Fire");
-            yield return new WaitForSeconds(0.467f);
+            yield return new WaitForSeconds(0.35f);
             player.Die(transform);
             weapon.Attack(player.transform);
             AudioController.instance.PlaySoundNVibrate(AudioController.instance.ak47Gun, 0);
-            yield return new WaitForSeconds(0.467f);
+            yield return new WaitForSeconds(0.35f);
             StopAttack();
         }
     }

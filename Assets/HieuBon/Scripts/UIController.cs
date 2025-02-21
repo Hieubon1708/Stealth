@@ -38,7 +38,7 @@ namespace Hunter
         {
             //EventManager.EmitEvent(EventVariables.StopCountDownShowAdsInGame);
             BridgeController.instance.LogLevelCompleteWithParameter("stealth", GameManager.instance.Level);
-            //Manager.instance.Stage++;
+            GameManager.instance.Level++;
             gamePlay.Win();
         }
 
@@ -114,6 +114,7 @@ namespace Hunter
                     }
                 });
             }*/
+            GameController.instance.LoadLevel(GameManager.instance.Level);
         }
 
         public void BossEnd()

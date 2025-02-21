@@ -3,6 +3,7 @@ using Cinemachine;
 using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
+using static Hunter.GameManager;
 
 namespace Hunter
 {
@@ -24,6 +25,8 @@ namespace Hunter
 
         public List<Player> poppies;
         public GameObject[] prePoppies;
+        public List<Character> tempPoppies;
+        public List<WeaponType> tempWeaponPoppies;
 
         public CinemachineVirtualCamera camFollow;
         public GameObject map;
@@ -39,7 +42,7 @@ namespace Hunter
         public Transform container;
         public ParticleSystem fxBum;
         public GameObject[] preBotHealths;
-
+        public Dictionary<GameObject, WeaponType> tempWeaponOnGround = new Dictionary<GameObject, WeaponType>();
 
         public void Awake()
         {
@@ -167,6 +170,18 @@ namespace Hunter
 
         public void AddWeapon(WeaponType weaponType)
         {
+            int min = 100;
+            for (int i = 0; i < poppies.Count; i++)
+            {
+                if(poppies[i].weapon == null)
+                {
+                    min = 0; break;
+                }
+                if ((int)poppies[i].weapon.weaponType < min)
+                {
+                    min = (int)poppies[i].weapon.weaponType;
+                }
+            }
             for (int i = 0; i < poppies.Count; i++)
             {
                 if (poppies[i].weapon == null)
@@ -199,7 +214,16 @@ namespace Hunter
 
         void LoadPoppy()
         {
-            AddPoppy(GameManager.Character.Male, WeaponType.None);
+            tempPoppies = new List<Character>(GameManager.instance.RescuedCharacter);
+            tempWeaponPoppies = new List<WeaponType>(GameManager.instance.WeaponCharacter);
+            for (int i = 0; i < tempPoppies.Count; i++)
+            {
+                AddPoppy(tempPoppies[i], tempWeaponPoppies[i]);
+            }
+            if (tempPoppies.Count == 0)
+            {
+                AddPoppy(Character.Male, WeaponType.None);
+            }
         }
 
         public bool IsBoss()
