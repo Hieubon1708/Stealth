@@ -94,7 +94,7 @@ namespace Hunter
 
                 Vector3 targetDirection = target.transform.position - transform.position;
                 Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 7.5f);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 15f);
                 float angle = Quaternion.Angle(transform.rotation, targetRotation);
                 if (angle < 5)
                 {
@@ -126,7 +126,7 @@ namespace Hunter
                         if (target == null) target = hit.collider.gameObject;
                         Vector3 targetDirection = target.transform.position - transform.position;
                         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 7.5f);
+                        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 15f);
                         StopHear();
                         StopLastTrace();
                         StopLostTrack();

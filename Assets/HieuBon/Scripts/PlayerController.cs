@@ -42,7 +42,7 @@ namespace Hunter
         public float GetSpeed(Player player)
         {
             float result = playerTouchMovement.GetMovemntAmount().magnitude;
-            return result != 0 ? result * player.navMeshAgent.speed / 3 : player.navMeshAgent.velocity.magnitude;
+            return result != 0 ? result * 2 : player.navMeshAgent.velocity.magnitude;
         }
 
         public void ResetGame()
@@ -63,7 +63,7 @@ namespace Hunter
 
         public bool IsKey(Key key)
         {
-            if(keys.ContainsKey(key))
+            if (keys.ContainsKey(key))
             {
                 keys.Remove(key);
                 return true;
@@ -75,7 +75,7 @@ namespace Hunter
         {
             foreach (var item in keys)
             {
-                if(item.Value == value)
+                if (item.Value == value)
                 {
                     item.Key.ResetKey();
                     keys.Remove(item.Key);

@@ -36,6 +36,9 @@ namespace Hunter
                     rbs[i].isKinematic = false;
                 }
                 GameController.instance.poppies.Add(player);
+                GameController.instance.tempPoppies.Add(player.character);
+                GameController.instance.tempWeaponPoppies.Add(player.WeaponType);
+                GameController.instance.LoadWeaponPoppy(player.WeaponType, player);
                 AIManager.Instance.Init();
                 AudioController.instance.PlaySoundNVibrate(AudioController.instance.objectBrocken, 0);
                 old.SetActive(false);

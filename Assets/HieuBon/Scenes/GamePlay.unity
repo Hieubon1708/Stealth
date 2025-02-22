@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7515,6 +7515,8 @@ MonoBehaviour:
   prePoppies:
   - {fileID: 4708460396495754227, guid: fe61b5af7bad17e43abf524cf1957ca7, type: 3}
   - {fileID: 2194452865610335691, guid: e1ac30ff66a09fd40868514e453b991e, type: 3}
+  tempPoppies: 
+  tempWeaponPoppies: 
   camFollow: {fileID: 4454412736901706054}
   map: {fileID: 0}
   isAlert: 0
@@ -7548,8 +7550,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preWeapons:
-  - {fileID: 2197494186867910570, guid: ac7d283c84ff75a40a135355910a53ad, type: 3}
-  - {fileID: 1769892370880275, guid: e95839ac94afad0428c90637ab6a2d99, type: 3}
+  - {fileID: 1401243487086595, guid: 95ee9b55584b8d048b100f898928186d, type: 3}
+  - {fileID: 1649066729900587, guid: 0a62cd2cd5d70b54cb1c91d441a4f76c, type: 3}
+  - {fileID: 1186608360574867, guid: ce658426a85f3e444bb513e9c66d0ab3, type: 3}
 --- !u!114 &1587366049
 MonoBehaviour:
   m_ObjectHideFlags: 0

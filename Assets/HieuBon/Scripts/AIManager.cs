@@ -19,7 +19,7 @@ namespace Hunter
         }
 
         public Transform Target;
-        public float RadiusAroundTarget = 0.5f;
+        float RadiusAroundTarget = 0.7f;
         float lengthCircle = 4;
 
         private void Awake()
@@ -51,23 +51,23 @@ namespace Hunter
                     float mulI = i;
                     if (i >= lengthCircle)
                     {
-                        mulRadius = 0.5f;
-                        mulI -= lengthCircle + 0.5f;
+                        mulRadius = 0.7f;
+                        mulI -= lengthCircle + 0.7f;
                     }
                     if (i >= lengthCircle * 2)
                     {
-                        mulRadius = 0.5f;
-                        mulI -= lengthCircle * 2 + 0.5f;
+                        mulRadius = 0.7f;
+                        mulI -= lengthCircle * 2 + 0.7f;
                     }
                     if (i >= lengthCircle * 3)
                     {
-                        mulRadius = 1f;
+                        mulRadius = 1.4f;
                         mulI -= lengthCircle * 2;
                     }
                     if (i >= lengthCircle * 4)
                     {
-                        mulRadius = 1f;
-                        mulI -= lengthCircle * 2 + 0.5f;
+                        mulRadius = 1.4f;
+                        mulI -= lengthCircle * 2 + 0.7f;
                     }
                     GameController.instance.poppies[i].aIUnit.Init(RadiusAroundTarget + mulRadius, new Vector3(
                    Target.position.x + (RadiusAroundTarget + mulRadius + GameController.instance.poppies[i].aIUnit.extraX) * Mathf.Cos(2 * Mathf.PI * mulI / 4),
@@ -101,23 +101,23 @@ namespace Hunter
                     float mulI = i;
                     if (i >= lengthCircle)
                     {
-                        mulRadius = 0.5f;
-                        mulI -= lengthCircle + 0.5f;
+                        mulRadius = 0.7f;
+                        mulI -= lengthCircle + 0.7f;
                     }
                     if (i >= lengthCircle * 2)
                     {
-                        mulRadius = 0.5f;
-                        mulI -= lengthCircle * 2 + 0.5f;
+                        mulRadius = 0.7f;
+                        mulI -= lengthCircle * 2 + 0.7f;
                     }
                     if (i >= lengthCircle * 3)
                     {
-                        mulRadius = 1f;
+                        mulRadius = 1.4f;
                         mulI -= lengthCircle * 2;
                     }
                     if (i >= lengthCircle * 4)
                     {
-                        mulRadius = 1f;
-                        mulI -= lengthCircle * 2 + 0.5f;
+                        mulRadius = 1.4f;
+                        mulI -= lengthCircle * 2 + 0.7f;
                     }
                     GameController.instance.poppies[i].aIUnit.MoveTo(new Vector3(
                    Target.position.x + (RadiusAroundTarget + mulRadius + GameController.instance.poppies[i].aIUnit.extraX) * Mathf.Cos(2 * Mathf.PI * mulI / 4),

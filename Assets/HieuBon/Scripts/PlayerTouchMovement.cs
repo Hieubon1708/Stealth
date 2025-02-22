@@ -117,6 +117,12 @@ namespace Hunter
             return StartPosition;
         }
 
+        public float GetSpeedAgent()
+        {
+            return navMeshAgent.speed * MovementAmount.magnitude;
+        }
+
+
         public Vector3 scaledMovement;
         public Rigidbody rb;
 

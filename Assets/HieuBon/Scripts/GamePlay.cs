@@ -39,7 +39,13 @@ namespace Hunter
 
         public void Win()
         {
-     
+            /*for (int i = 0; i < GameController.instance.poppies.Count; i++)
+            {
+                if (GameController.instance.tempWeaponOnGround.ContainsKey(GameController.instance.poppies[i].gameObject))
+                {
+                    GameController.instance.tempWeaponPoppies[i] = GameController.instance.tempWeaponOnGround[GameController.instance.poppies[i].gameObject];
+                }
+            }*/
         }
 
         public void Lose()
@@ -85,12 +91,7 @@ namespace Hunter
 
         public void ChangeWeapon(int index)
         {
-            GameController.WeaponType weaponType = GameController.WeaponType.Knife;
-            if (index == 1) weaponType = GameController.WeaponType.Gun;
-            for (int i = 0; i < GameController.instance.poppies.Count; i++)
-            {
-                GameController.instance.weaponEquip.Equip(GameController.instance.poppies[i], weaponType);
-            }
+            
         }
 
         public void LoadUI()

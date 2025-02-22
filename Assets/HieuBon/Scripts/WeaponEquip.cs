@@ -12,7 +12,7 @@ namespace Hunter
             {
                 Destroy(player.weapon.gameObject);
             }
-            GameObject w = GetPreWeaponByIndex((int)weaponType - 1);
+            GameObject w = GetPreWeaponByIndex((int)weaponType);
             if (w)
             {
                 GameObject weapon = Instantiate(w, player.hand);

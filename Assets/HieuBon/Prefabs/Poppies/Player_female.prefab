@@ -636,6 +636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d7d10c75f0a6f488f9d77c3caa3c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: 1
+  WeaponType: 0
   animator: {fileID: 219995287429830106}
   navMeshAgent: {fileID: 2405198308121066471}
   lookAt: {fileID: 2194452865610335691}

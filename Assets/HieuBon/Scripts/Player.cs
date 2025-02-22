@@ -3,11 +3,14 @@ using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.TextCore.Text;
 
 namespace Hunter
 {
     public class Player : MonoBehaviour
     {
+        public GameManager.Character character;
+        public GameController.WeaponType WeaponType;
         public Animator animator;
         public NavMeshAgent navMeshAgent;
         public GameObject lookAt;
@@ -67,60 +70,34 @@ namespace Hunter
                 Physics.Linecast(from, to, out hit, layer);
                 if (hit.collider != null && hit.collider.CompareTag("Bot"))
                 {
-                    if (weapon.weaponType == GameController.WeaponType.Knife)
+                    if (!bots.Contains(other.gameObject))
                     {
-                        if (!bots.Contains(other.gameObject))
-                        {
-                            bots.Add(other.gameObject);
-                        }
-                        if (isKilling) return;
-                        isKilling = true;
-                        isAttack = true;
-                        lookAt = other.gameObject;
-                        animator.SetTrigger("Hit");
-                        PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 5.5f;
-                        delayKill = DOVirtual.DelayedCall(0.35f, delegate
-                        {
-                            isAttack = false;
-                            AudioController.instance.PlaySoundNVibrate(AudioController.instance.cut, 0);
-                            ChangeLookAt();
-                            if (!GameController.instance.IsAttack()) PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 7;
-                            for (int i = 0; i < bots.Count; i++)
-                            {
-                                Bot bot = GameController.instance.GetBot(bots[i].gameObject);
-                                if (bot != null) bot.SubtractHp(weapon.damage, transform);
-                            }
-                            DOVirtual.DelayedCall(0.35f, delegate
-                            {
-                                isKilling = false;
-                                bots.Clear();
-                            });
-                        });
+                        bots.Add(other.gameObject);
                     }
-                    else if (weapon.weaponType == GameController.WeaponType.Gun)
+                    if (isKilling) return;
+                    isKilling = true;
+                    isAttack = true;
+                    lookAt = other.gameObject;
+                    animator.SetInteger("Hit Style", Random.Range(0, 2));
+                    animator.SetTrigger("Hit");
+                    PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 5.5f;
+                    delayKill = DOVirtual.DelayedCall(0.35f, delegate
                     {
-                        if (isKilling) return;
-                        isKilling = true;
-                        isAttack = true;
-                        lookAt = other.gameObject;
-                        animator.SetTrigger("Shot");
-                        PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 3.5f;
-                        delayKill = DOVirtual.DelayedCall(0.35f, delegate
+                        isAttack = false;
+                        AudioController.instance.PlaySoundNVibrate(AudioController.instance.cut, 0);
+                        ChangeLookAt();
+                        if (!GameController.instance.IsAttack()) PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 7;
+                        for (int i = 0; i < bots.Count; i++)
                         {
-                            isAttack = false;
-                            AudioController.instance.PlaySoundNVibrate(AudioController.instance.pistol, 0);
-                            weapon.Attack(other.transform);
-                            ChangeLookAt();
-                            animator.SetTrigger("No Shot");
-                            if (!GameController.instance.IsAttack()) PlayerController.instance.playerTouchMovement.navMeshAgent.speed = 7f;
-                            Bot bot = GameController.instance.GetBot(other.gameObject);
+                            Bot bot = GameController.instance.GetBot(bots[i].gameObject);
                             if (bot != null) bot.SubtractHp(weapon.damage, transform);
-                            DOVirtual.DelayedCall(0.65f, delegate
-                            {
-                                isKilling = false;
-                            });
+                        }
+                        DOVirtual.DelayedCall(0.35f, delegate
+                        {
+                            isKilling = false;
+                            bots.Clear();
                         });
-                    }
+                    });
                 }
             }
         }
@@ -204,19 +181,9 @@ namespace Hunter
 
         public void ResetPlayer()
         {
-            if (transform.position != Vector3.zero)
-            {
-                NavMeshHit hit;
-                if (NavMesh.SamplePosition(Vector3.zero, out hit, 100, NavMesh.AllAreas))
-                {
-                    navMeshAgent.Warp(hit.position);
-                }
-                else BridgeController.instance.Debug_LogWarning("!");
-            }
             navMeshAgent.angularSpeed = 0;
             IsKinematic(true);
             animator.enabled = true;
-            navMeshAgent.enabled = true;
             isKilling = false;
             transform.rotation = Quaternion.identity;
             col.enabled = true;

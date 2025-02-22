@@ -42,7 +42,6 @@ namespace Hunter
         public Transform container;
         public ParticleSystem fxBum;
         public GameObject[] preBotHealths;
-        public Dictionary<GameObject, WeaponType> tempWeaponOnGround = new Dictionary<GameObject, WeaponType>();
 
         public void Awake()
         {
@@ -73,7 +72,7 @@ namespace Hunter
 
         public enum WeaponType
         {
-            None, Knife, Gun
+            Bat, Exe, Wrench
         }
 
         public enum AlertType
@@ -216,13 +215,17 @@ namespace Hunter
         {
             tempPoppies = new List<Character>(GameManager.instance.RescuedCharacter);
             tempWeaponPoppies = new List<WeaponType>(GameManager.instance.WeaponCharacter);
+            Debug.Log(tempPoppies.Count);
+            Debug.Log(tempWeaponPoppies.Count);
             for (int i = 0; i < tempPoppies.Count; i++)
             {
                 AddPoppy(tempPoppies[i], tempWeaponPoppies[i]);
             }
             if (tempPoppies.Count == 0)
             {
-                AddPoppy(Character.Male, WeaponType.None);
+                AddPoppy(Character.Male, WeaponType.Wrench);
+                tempPoppies.Add(Character.Male);
+                tempWeaponPoppies.Add(WeaponType.Wrench);
             }
         }
 
@@ -263,7 +266,7 @@ namespace Hunter
             }
         }
 
-        void LoadWeaponPoppy(WeaponType weaponType, Player player)
+        public void LoadWeaponPoppy(WeaponType weaponType, Player player)
         {
             player.LoadWeapon(weaponType);
         }
